@@ -1,6 +1,10 @@
 "use client"
-import Image from "next/image";
 import { useState } from "react";
+
+interface Todo {
+  movie: string;
+  id: number;
+}
 
 export default function Home() {
   
@@ -31,13 +35,13 @@ export default function Home() {
 
   /*The purpose of this function is to find and display the item in your to-do list that matches
    the provided id (the one that was clicked to be edited).*/
-      const editItems = (id:any) => {
+      const editItems = (id:number) => {
       let obj:any = todos.find(item => item.id == id) //issay humnay dekha jo id hamary pass parameter main hain woo item kee id say match krrhe agar krrhe tw obj main save krdo or dikhado.
       setInput(obj.movie) //input field pay woo movie name ajaiga jo edit krna
       setId(obj.id) //same for id
   }
 
-  const delItems = (id: any) => {
+  const delItems = (id: number) => {
     let newArray:any = todos.filter(item => item.id !== id) 
       setTodos([...newArray])
   }
