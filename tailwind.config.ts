@@ -1,3 +1,4 @@
+import { url } from "inspector";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -8,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        bannerImage: "url('/myimages/movie2.jpg')"
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
