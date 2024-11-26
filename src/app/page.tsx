@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react";
-import Image from "next/image";
+
 
 // Define the type for each todo item
 interface Todo {
